@@ -1,0 +1,9 @@
+{"at":0,"kind":"plugin","record":{"plugin":"a","rev":1,"input":"raw","output":"v1","tenants":["lab"],"required":true,"hosts":["h"]}}
+{"at":0,"kind":"plugin","record":{"plugin":"b","rev":1,"input":"v1","output":"out","tenants":["lab"],"required":true,"hosts":["h"]}}
+{"at":1,"kind":"publish","record":{"chain":"flow","revision":1,"members":["a@1","b@1"],"tenants":["lab"]}}
+{"at":2,"kind":"invoke","record":{"tenant":"lab","call":"existing","chain":"flow","input":"raw"}}
+{"at":3,"kind":"claim","record":{"host":"h","call":"existing","plugin":"a","rev":1,"attempt":"x"}}
+{"at":4,"kind":"plugin","record":{"plugin":"a","rev":2,"input":"raw","output":"v2","tenants":["lab"],"required":true,"hosts":["h"]}}
+{"at":5,"kind":"publish","record":{"chain":"flow","revision":2,"members":["a@2","b@1"],"tenants":["lab"]}}
+{"at":6,"kind":"settle","record":{"host":"h","attempt":"x","state":"done","output":"v1"}}
+{"at":7,"kind":"inspect","record":{"call":"existing"}}

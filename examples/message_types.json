@@ -1,0 +1,10 @@
+[
+  "claim",
+  "inspect",
+  "invoke",
+  "plugin",
+  "publish",
+  "restart",
+  "settle",
+  "withdraw"
+]
